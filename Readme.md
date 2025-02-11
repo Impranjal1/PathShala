@@ -3,6 +3,19 @@
 
 **Pathshala** is an educational platform that connects students with coaching centers. This project includes a client-side application built with React and a server-side application built with Node.js. Students can find coaching centers, while coaching centers can register to offer their services.
 
+## Contributing
+
+We welcome contributions to improve the Pathshala project. To contribute:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-name`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature-name`)
+5. Open a pull request
+
+---
+
+
 ## Project Structure
 
 ### Directory Structure
