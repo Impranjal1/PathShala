@@ -5,7 +5,7 @@
 
 ## Contributing
 
-We welcome contributions to improve the Pathshala project. To contribute:
+To contribute:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature-name`)
