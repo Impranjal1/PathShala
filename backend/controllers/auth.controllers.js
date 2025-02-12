@@ -1,4 +1,4 @@
-import User from "../models/User";
+import {User} from "../models/User.models.js";
 import admin from 'firebase-admin';
 
 export const register = async (req, res) => {

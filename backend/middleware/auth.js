@@ -1,13 +1,15 @@
 import admin from "firebase-admin";
-import User from "../models/User"
+import { User } from '../models/User.models.js';
 
 const serviceAccount = require('../config/firebase-service-account.json');
+
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
 
-exports.authMiddleware = async (req, res, next) => {
+// Correct way to export middleware in ES Modules
+export const authMiddleware = async (req, res, next) => {
   try {
     const token = req.headers.authorization?.split('Bearer ')[1];
     if (!token) {

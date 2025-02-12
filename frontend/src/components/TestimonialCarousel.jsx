@@ -4,43 +4,49 @@ import './test.css';
 import { Star, StarHalf } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Ravi Patel",
-    quote: "This is the best service I've ever used. The team is exceptional, and the overall experience was flawless!",
-
-    rating: 4
-  },
-  {
-    name: "Nalina Thakur",
-    quote: "A truly transformative experience! Highly recommended to anyone looking for excellent services.",
-    rating: 5
-  },
-  {
-    name: "Gourav Kumar",
-    quote: "Outstanding service and incredible support. I couldn’t have asked for a better experience!",
-    rating: 4
-  },
-  {
-    name: "Vaibhav Kothari",
-    quote: "Amazing service and quick resolution. Very satisfied with the results and the entire process.",
-    rating: 4
-  },
-  {
-    name: "Abhigya Krishna",
-    quote: "Exceeded all my expectations. The team’s professionalism is unmatched.",
-    rating: 5
-  },
-  {
-    name: "David Patel",
-    quote: "A brilliant experience from start to finish. I would definitely recommend this service to others!",
-    rating: 4
-  },
-  {
-    name: "Anjali Verma",
-    quote: "The customer support was incredible, and the results surpassed all my expectations.",
-    rating: 5
-  }
-];
+    {
+      name: "Sara Mehta",
+      quote: "I had an amazing experience! The service was quick and efficient, and I felt supported every step of the way.",
+      rating: 5,
+      avatar: "https://randomuser.me/api/portraits/women/1.jpg"
+    },
+    {
+      name: "Ishaan Verma",
+      quote: "Exceptional service and friendly staff. They made the entire process smooth and hassle-free. Highly recommend!",
+      rating: 5,
+      avatar: "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      name: "Priya Kapoor",
+      quote: "The team went above and beyond to ensure I was satisfied. I am thoroughly impressed with their dedication.",
+      rating: 5,
+      avatar: "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+      name: "Arjun Reddy",
+      quote: "A fantastic experience from beginning to end. They truly understand customer needs and deliver top-notch results.",
+      rating: 4,
+      avatar: "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      name: "Neha Desai",
+      quote: "I was blown away by the professionalism and expertise of the team. I would definitely use this service again!",
+      rating: 5,
+      avatar: "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+      name: "Vikram Soni",
+      quote: "The service was great, and I could tell they genuinely cared about getting the best results for me. I highly recommend them.",
+      rating: 4,
+      avatar: "https://randomuser.me/api/portraits/men/6.jpg"
+    },
+    {
+      name: "Simran Kaur",
+      quote: "Fast, efficient, and effective. The experience exceeded my expectations in every way. I’m a happy customer!",
+      rating: 5,
+      avatar: "https://randomuser.me/api/portraits/women/7.jpg"
+    }
+  ];
 
 
 const StarRating = ({ rating }) => {
@@ -84,13 +90,13 @@ const TestimonialCarousel = () => {
                 <div className="flex items-center space-x-4">
                   <div className="relative">
                     {/* Add Avatar Here if you want */}
-                    {/* <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-purple-400 ring-offset-2">
+                    <div className="w-16 h-16 rounded-full overflow-hidden ring-2 ring-purple-400 ring-offset-2">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
                       className="w-full h-full object-cover"
                     />
-                  </div> */}
+                  </div>
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg text-gray-800">

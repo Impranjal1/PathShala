@@ -1,4 +1,4 @@
-import Coaching from '../models/Coaching';
+import {Coaching} from '../models/Coaching.models.js';
 
 export const getNearbyCoachingCenters = async (req, res) => {
   try {

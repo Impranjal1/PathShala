@@ -1,4 +1,4 @@
-import Coaching from '../models/Coaching';
+import {Coaching} from '../models/Coaching.models.js';
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);

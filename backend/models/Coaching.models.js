@@ -48,4 +48,4 @@ const coachingSchema = new mongoose.Schema({
 });
 
 coachingSchema.index({ location: '2dsphere' });
-module.exports = mongoose.model('Coaching', coachingSchema);
+export const Coaching = mongoose.model('Coaching', coachingSchema);
