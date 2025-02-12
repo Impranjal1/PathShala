@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { FaGraduationCap, FaUniversity } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import TestimonialCarousel from '../components/TestimonialCarousel';
-// import { Contact } from 'lucide-react';
 import Contact from "../components/Contact"
 
 const Home = () => {
