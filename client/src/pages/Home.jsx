@@ -8,7 +8,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-gray-50 font-sans"> 
       {/* Hero Section */}
       <motion.div
         className="bg-gradient-to-r from-blue-400 to-indigo-500 text-white py-20"
