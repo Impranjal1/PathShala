@@ -1,36 +1,51 @@
 import mongoose from "mongoose";
-
 const coachingSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  description: String,
+  address: String,
+  location: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
+  },
+  subjects: [String],
+  fees: Number,
+  photos: [String],
+  rating: {
+    type: Number,
+    default: 0
+  },
+  reviews: [{
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+      ref: 'User'
     },
-    name: {
-      type: String,
-      required: true
-    },
-    description: String,
-    photos: [String],
-    location: {
-      type: {
-        type: String,
-        enum: ['Point'],
-        required: true
-      },
-      coordinates: {
-        type: [Number],
-        required: true
-      }
-    },
-    address: String,
-    subjects: [String],
-    fees: Number,
-    hasRegistrationPaid: {
-      type: Boolean,
-      default: false
+    rating: Number,
+    comment: String,
+    createdAt: {
+      type: Date,
+      default: Date.now
     }
-  });
-  
-  coachingSchema.index({ location: '2dsphere' });
-  module.exports = mongoose.model('Coaching', coachingSchema);
+  }],
+  hasRegistrationPaid: {
+    type: Boolean,
+    default: false
+  }
+});
+
+coachingSchema.index({ location: '2dsphere' });
+module.exports = mongoose.model('Coaching', coachingSchema);

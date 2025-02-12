@@ -1,14 +1,15 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-  email: {
+  firebaseUid: {
     type: String,
     required: true,
     unique: true
   },
-  password: {
+  email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   role: {
     type: String,
@@ -19,7 +20,11 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  verificationToken: String,
+  profile: {
+    name: String,
+    phone: String,
+    address: String
+  },
   createdAt: {
     type: Date,
     default: Date.now

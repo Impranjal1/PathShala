@@ -2,6 +2,7 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import { auth, firebaseService } from '../services/firebase';
 import axios from 'axios';
+import PropTypes from 'prop-types'; 
 
 const AuthContext = createContext();
 
@@ -58,16 +59,18 @@ export function AuthProvider({ children }) {
   };
 
   // Sign in with Google
-  const signInWithGoogle = async (role) => {
-    try {
-      const user = await firebaseService.signInWithGoogle();
-      await updateUserInBackend(user, role);
-      return user;
-    } catch (error) {
-      setError(error.message);
-      throw error;
-    }
-  };
+ // Inside AuthContext.jsx
+const signInWithGoogle = async (role) => {
+  try {
+    const user = await firebaseService.signInWithGoogle();
+    await updateUserInBackend(user, role);
+    return user;
+  } catch (error) {
+    setError(error.message);
+    throw error;
+  }
+};
+
 
   // Sign out
   const signOut = async () => {
@@ -150,3 +153,6 @@ export function AuthProvider({ children }) {
     </AuthContext.Provider>
   );
 }
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

@@ -41,6 +41,7 @@ export const firebaseService = {
     }
   },
 
+  
   // Sign in with email and password
   signIn: async (email, password) => {
     try {
