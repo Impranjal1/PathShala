@@ -23,7 +23,7 @@ const Home = () => {
           </p>
           <button
             onClick={() => navigate('/login')}
-            className="bg-white text-green-600 px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-200 transition"
+            className="bg-white text-blue-600 px-6 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-gray-200 transition"
           >
             Get Started
           </button>
