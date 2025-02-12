@@ -1,0 +1,27 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+/* Media query for mobile devices (adjusting animation speed) */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 15s linear infinite; /* Faster scrolling on mobile */
+  }
+}
+
+/* Optional: Further increase the speed on smaller screens (e.g., for very small mobile screens) */
+@media (max-width: 480px) {
+  .animate-scroll {
+    animation: scroll 10s linear infinite; /* Even faster on smaller screens */
+  }
+}
